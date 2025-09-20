@@ -1,0 +1,84 @@
+{
+    "layer": "top", 
+    "position": "top", 
+    
+    "height": 14, 
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["custom/server", "custom/tailscale"],
+    "modules-right": [ "pulseaudio", "battery", "tray", "clock"],
+
+    "tray": {
+        
+        "spacing": 10
+    },
+    "clock": {
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "{usage}% "
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "battery": {
+        "bat": "BAT0",
+        "states": {
+             "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+       
+       
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-disconnected": "Disconnected ⚠"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+  "custom/server": {
+    "format": " {}",
+    "tooltip": true,
+    "escape" : true,
+    "exec": "/home/simon/bin/server_uptime.sh",
+    "interval": 30
+  },
+
+"custom/space": {
+  "format": "   "  
+}
+
+
+,
+"custom/tailscale": {
+  "format": "󰌾 {}",
+  "exec": "/bin/sh -c 'tailscale status | grep -q 100.126.54.86 && echo ON || echo OFF'",
+  "interval": 15
+},
+"custom/bluetooth": {
+  "exec": "bluetoothctl info | grep 'Connected: yes' >/dev/null && echo '' || echo ''",
+  "interval": 5,
+  "format": "{}"
+}
+
+
+   
+
+
+}
