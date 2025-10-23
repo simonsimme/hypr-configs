@@ -5,7 +5,7 @@
     "height": 14, 
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["custom/server", "custom/tailscale"],
-    "modules-right": [ "pulseaudio", "battery", "tray", "clock"],
+    "modules-right": [ "custom/powermodes","pulseaudio", "battery", "tray", "clock"],
 
     "tray": {
         
@@ -68,9 +68,16 @@
 ,
 "custom/tailscale": {
   "format": "󰌾 {}",
-  "exec": "/bin/sh -c 'tailscale status | grep -q 100.126.54.86 && echo ON || echo OFF'",
+  "exec": "/bin/sh -c 'tailscale status | grep -q 100.69.157.97 && echo ON || echo OFF'",
   "interval": 15
 },
+"custom/powermodes": {
+  "format": " {}",
+  "exec": "/home/simon/hypr-configs/waybar/scripts/power.sh",
+  "interval": 10,
+  "on-click": "/home/simon/hypr-configs/waybar/scripts/power.sh switch"
+}
+,
 "custom/bluetooth": {
   "exec": "bluetoothctl info | grep 'Connected: yes' >/dev/null && echo '' || echo ''",
   "interval": 5,
