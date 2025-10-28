@@ -1,5 +1,5 @@
 #!/bin/sh
-# Show current power profile or switch to next on click
+# Show current power profile or switch to next on click aa
 
 if [ "$1" = "switch" ]; then
   current=$(powerprofilesctl get)

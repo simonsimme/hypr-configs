@@ -1,0 +1,10 @@
+# Path: ~/.config/hyprshade/hyprshade.toml
+
+[shaders]
+# Path to the shader file
+night_mode = "~/.config/hyprshade/shaders/night_mode.glsl"
+soft_contrast = "~/.config/hyprshade/shaders/soft_contrast.glsl"
+
+[schedule]
+# Apply night_mode from 20:00 to 07:00
+night_mode = { start = "20:00", end = "07:00" }
