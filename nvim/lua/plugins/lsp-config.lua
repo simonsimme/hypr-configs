@@ -35,10 +35,10 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			vim.lsp.config("*", {
+		--local capabilities = require("cmp_nvim_lsp").default_capabilities()
+		 local capabilities = require('blink.cmp').get_lsp_capabilities(capabilities)
+      vim.lsp.config("*", {
 				capabilities = capabilities,
-				root_markers = { ".git" }, -- optional, common default
 			})
 
 			vim.lsp.config("lua_ls", {
