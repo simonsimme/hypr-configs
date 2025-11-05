@@ -1,7 +1,0 @@
-autocompleate ctrl x + ctrl o
-indent =
-find file crtl p
-find code space f g
-code info shif k
-action space c a
-autoformat space g f
