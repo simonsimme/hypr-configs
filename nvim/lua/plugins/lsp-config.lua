@@ -27,6 +27,7 @@ return {
 						"sqlls",
 						"hls",
 						"pyright",
+            "gopls"
 					},
 				})
 			end,
@@ -62,6 +63,8 @@ return {
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {}) --shift +k
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {}) --space + c+a
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "Show error" })
+    
 		end,
 	},
 }
