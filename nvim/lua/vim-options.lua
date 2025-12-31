@@ -7,3 +7,4 @@ vim.g.mapleader = " "
 vim.cmd("set autoindent")
 vim.cmd("set smartindent")
 vim.g.maplocalleader = "\\"
+vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File", silent = true })
