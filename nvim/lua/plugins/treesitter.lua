@@ -22,6 +22,7 @@ return {
 				"powershell",
 				"haskell",
         "go",
+        "html",
 			},
 
 			-- Install parsers synchronously (only applied to `ensure_installed`)
