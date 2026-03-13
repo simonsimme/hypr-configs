@@ -7,6 +7,41 @@
     "modules-center": ["custom/server", "custom/tailscale"],
     "modules-right": [ "custom/powermodes","pulseaudio", "battery", "tray", "clock"],
 
+    "hyprland/workspaces": {
+      "format": "{id}:{windows}",
+      "format-window-separator": " ",
+      "window-rewrite-default": "",
+      "window-rewrite": {
+        "class<code|Code|code-oss|VSCodium|codium>": "󰨞",
+        "class<jetbrains-.*|idea|pycharm|clion|webstorm|goland|rider>": "",
+        "class<docker|Docker|docker-desktop|Docker Desktop>": "",
+        "class<kitty|Alacritty|wezterm|foot|org\\.wezfurlong\\.wezterm>": "",
+
+        "class<firefox|LibreWolf|librewolf|Waterfox|waterfox>": "",
+        "class<google-chrome|Google-chrome|chromium|Chromium|brave-browser|Brave-browser|microsoft-edge|Microsoft-edge>": "",
+
+        "class<discord|Discord|vesktop|Vesktop>": "",
+        "class<Slack|slack>": "",
+        "class<TelegramDesktop|telegram-desktop|org\\.telegram\\.desktop>": "",
+        "class<Signal|signal>": "",
+
+        "class<Spotify|spotify>": "",
+        "class<vlc|Vlc>": "󰕼",
+        "class<mpv|Mpv|celluloid>": "",
+        "class<obs|OBS|com\\.obsproject\\.Studio>": "",
+
+        "class<org\\.gnome\\.Nautilus|nautilus|Files|thunar|Thunar|dolphin|org\\.kde\\.dolphin>": "",
+
+        "class<steam|Steam|steam_app_.*>": "",
+        "class<heroic|Heroic>": "󰊴",
+        "class<lutris|Lutris>": "󰺵",
+
+        "class<pavucontrol|Pavucontrol>": "",
+        "class<blueman-manager|Blueman-manager>": "",
+        "class<nm-connection-editor>": "󰖩"
+      }
+    },
+
     "tray": {
         
         "spacing": 10
