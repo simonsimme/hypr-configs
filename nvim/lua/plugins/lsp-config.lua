@@ -27,7 +27,7 @@ return {
 						"sqlls",
 						"hls",
 						"pyright",
-            "gopls"
+						"gopls",
 					},
 				})
 			end,
@@ -36,11 +36,23 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-		--local capabilities = require("cmp_nvim_lsp").default_capabilities()
-		 local capabilities = require('blink.cmp').get_lsp_capabilities(capabilities)
-      vim.lsp.config("*", {
+			--local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			local capabilities = require("blink.cmp").get_lsp_capabilities()
+			vim.lsp.config("*", {
 				capabilities = capabilities,
 			})
+			vim.lsp.config("pyright", {
+	settings = {
+		python = {
+			analysis = {
+				typeCheckingMode = "off",
+				autoSearchPaths = true,
+				useLibraryCodeForTypes = true,
+				diagnosticMode = "workspace",
+			},
+		},
+	},
+})
 
 			vim.lsp.config("lua_ls", {
 				capabilities = capabilities,
@@ -63,8 +75,7 @@ return {
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {}) --shift +k
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {}) --space + c+a
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "Show error" })
-    
+			vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show error" })
 		end,
 	},
 }
