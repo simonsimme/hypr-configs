@@ -7,7 +7,7 @@ return {
     bigfile = { enabled = true },
     dashboard = { enabled = false },
     explorer = { enabled = false },
-    indent = { enabled = true },
+    indent = { enabled = false }, -- disabled: uses scope internally, crashes with nvim 0.12 treesitter API change
     input = { enabled = true },
     notifier = {
       enabled = false,
@@ -15,7 +15,7 @@ return {
     },
     picker = { enabled = true },
     quickfile = { enabled = true },
-    scope = { enabled = true },
+    scope = { enabled = false }, -- disabled: crashes with nvim 0.12 treesitter API change
     scroll = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },

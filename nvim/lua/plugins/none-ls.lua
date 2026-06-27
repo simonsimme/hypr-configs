@@ -11,7 +11,7 @@ return {
         -- 	null_ls.builtins.formatting.eslint_d,
         -- null_ls.builtins.diagnostics.ast_grep,
         null_ls.builtins.diagnostics.checkstyle,
-        --	require("none-ls.diagnostics.eslint"), -- requires none-ls-extras.nvim
+        -- require("none-ls.diagnostics.eslint"), -- requires none-ls-extras.nvim
         -- Python
         null_ls.builtins.formatting.black,
         null_ls.builtins.formatting.isort,
